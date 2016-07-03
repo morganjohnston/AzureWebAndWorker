@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Shared</RootNamespace>
     <AssemblyName>Shared</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,8 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ConfigInjector, Version=1.1.0.175, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ConfigInjector.1.1.0.175\lib\net45\ConfigInjector.dll</HintPath>
+    <Reference Include="ConfigInjector, Version=2.1.949.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConfigInjector.2.1.949.0\lib\net45\ConfigInjector.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

@@ -11,7 +11,7 @@ namespace Worker.AutofacModules
         protected override void Load(ContainerBuilder builder)
         {
             ConfigurationConfigurator.RegisterConfigurationSettings()
-                .FromAssemblies(new []{
+                .FromAssemblies(new[]{
                     Assembly.GetAssembly(typeof(AppEnvironment)),
                     ThisAssembly
                 })

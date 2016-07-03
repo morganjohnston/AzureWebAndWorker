@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
 using Autofac;
 using ConfigInjector.Configuration;
+using Web.Configuration;
 using Module = Autofac.Module;
-using ServiceBusConnectionString = Web.Configuration.ServiceBusConnectionString;
 
 namespace Web.AutofacModules
 {

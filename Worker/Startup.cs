@@ -25,21 +25,19 @@ namespace Worker
 
         private void ConfigureLogging()
         {
-            var devEnvironments = new List<EnvironmentName>{EnvironmentName.Local, EnvironmentName.CI};
+            var devEnvironments = new List<EnvironmentName> { EnvironmentName.Local, EnvironmentName.CI };
             var isDevelopmentEnvironment = devEnvironments.Contains(appEnvironment);
             var minimumLoggingLevel = isDevelopmentEnvironment ? LogEventLevel.Debug : LogEventLevel.Information;
 
             var logger = new LoggerConfiguration()
                 .MinimumLevel.Is(minimumLoggingLevel)
                 .Enrich.FromLogContext()
-                .Enrich.WithMachineName()
-                .Enrich.WithProperty("Source", "Web")
+                .Enrich.WithProperty("Source", "Worker")
                 .Enrich.WithProperty("EnvironmentName", appEnvironment)
                 .Enrich.WithProperty("ServiceAccount", Environment.UserName)
                 .Enrich.WithProperty("ApplicationVersion", GetType().Assembly.GetName().Version)
                 .WriteTo.ColoredConsole()
                 //.WriteTo.Seq(seqServerUri.ToString())
-                .WriteTo.Trace()
                 .CreateLogger();
 
             Log.Logger = logger;
