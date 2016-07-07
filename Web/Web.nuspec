@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>WebAndWorker</id>
+    <version>$version$</version>
+    <title>Web And Worker</title>
+    <authors>Morgan Johnston</authors>
+    <owners>Morgan Johnston</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Web And Worker Web package</description>
+	<projectUrl>https://github.com/morganjohnston/AzureWebAndWorker</projectUrl>
+    <copyright>None</copyright>
+  </metadata>
+  <files>
+    <file src="..\Worker\bin\Release\*.exe" target="app_data\jobs\continuous\Worker" />
+  </files>
+</package>
